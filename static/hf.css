@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #fdf6f0 0%, #fef9f4 50%, #fff7ed 100%);
+    min-height: 100vh;
+    color: #2c2416;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px 35px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(200, 150, 100, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #c5601a;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 0.95rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6b5d4f;
+    font-weight: 450;
+    transition: color 0.2s, transform 0.2s;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #c5601a;
+    border-bottom-color: #f0c4a0;
+}
+
+nav span {
+    color: #8b7a6b;
+    font-weight: 400;
+    background: #fef5ec;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(180, 130, 80, 0.06);
+    padding: 40px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #3e2f1c;
+    letter-spacing: -0.5px;
+}
+
+.flash {
+    background: linear-gradient(135deg, #fef0e0, #fde8d0);
+    color: #a35117;
+    padding: 14px 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    border: 1px solid #f5d5b0;
+    box-shadow: 0 2px 8px rgba(200, 140, 80, 0.08);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(160, 120, 70, 0.06);
+    transition: transform 0.25s, box-shadow 0.3s;
+    border: 1px solid #f7ede3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(180, 120, 50, 0.12);
+    border-color: #f0d5b5;
+}
+
+.product-emoji {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3e2f1c;
+    letter-spacing: -0.3px;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #7a6e61;
+    line-height: 1.5;
+}
+
+.product-details {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-weight: 600;
+    color: #c5601a;
+    font-size: 1.2rem;
+}
+
+.product-category {
+    background: #fef4e8;
+    color: #b45a1f;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    border: 1px solid #e9ddd1;
+    border-radius: 14px;
+    background: #fffdf9;
+    transition: all 0.25s;
+    font-family: 'Inter', sans-serif;
+    color: #2c2416;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #d18b4a;
+    box-shadow: 0 0 0 4px rgba(209, 139, 74, 0.12);
+    background: #ffffff;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #e07b39, #cc6b2c);
+    color: white;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 6px 18px rgba(200, 110, 40, 0.25);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(190, 100, 30, 0.35);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.97);
+}

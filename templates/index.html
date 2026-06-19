@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<h2>Наши апельсины</h2>
+{% if products %}
+    <div class="products-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-name">{{ product.name }}</div>
+            <div class="product-description">{{ product.description }}</div>
+            <div class="product-details">
+                <span class="product-price">{{ product.price }} ₽</span>
+                <span class="product-category">{{ product.category }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p style="color: #8b7a6b;">Пока нет товаров. Загляните позже!</p>
+{% endif %}
+{% endblock %}
