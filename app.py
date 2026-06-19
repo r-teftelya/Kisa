@@ -77,9 +77,9 @@ if __name__ == '__main__':
         db.create_all()
         if not Product.query.first():
             db.session.add_all([
-                Product(name='Апельсин Валенсия', description='Сладкий и сочный.', price=250.0, quantity=100, category='розница'),
-                Product(name='Апельсин Навел', description='Без косточек, легко чистится.', price=300.0, quantity=80, category='розница'),
-                Product(name='Красный апельсин', description='Насыщенный вкус, красная мякоть.', price=400.0, quantity=50, category='опт')
+                Product(name='Котик Беляш', description='Белый и милый.', price=250.0, quantity=100, category='розница'),
+                Product(name='Котик Черныш', description='Черный, сильно кусается.', price=300.0, quantity=80, category='розница'),
+                Product(name='Котик пушистый', description='Очень пушистый и красивый.', price=400.0, quantity=50, category='опт')
             ])
             db.session.commit()
     app.run(debug=True)
