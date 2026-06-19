@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 's3cr3t-k3y-f0r-0r4ng3s'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///oranges.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///kitis.db'
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
@@ -31,7 +31,7 @@ def load_user(user_id):
 @app.route('/')
 def index():
     products = Product.query.all()
-    return render_template('index.html', the_title='Главная - Торговля апельсинами', products=products)
+    return render_template('index.html', the_title='Главная - Торговля котиками', products=products)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
